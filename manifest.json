@@ -2,7 +2,6 @@
   "theme_color" : "#1c2df0",
   "background_color": "#ffffff",
   "display" : "standalone",
-  "scope" : "/",
   "start_url" : ".",
   "name" : "Менеджер задач",
   "short_name" : "Менеджер задач",
