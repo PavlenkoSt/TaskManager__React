@@ -1,5 +1,5 @@
 import Nav from "./Nav/Nav"
-
+import s from './Head.module.css'
 
 const Head = ({ dateNamesList, activeDate, changeActiveMonth }) => {
 
@@ -13,7 +13,7 @@ const Head = ({ dateNamesList, activeDate, changeActiveMonth }) => {
     return (
         <thead>
             <Nav activeDate={activeDate} dateNamesList={dateNamesList} changeActiveMonth={changeActiveMonth} />
-            <tr>
+            <tr className={s.days}>
                 {getDays()}
             </tr>
         </thead>

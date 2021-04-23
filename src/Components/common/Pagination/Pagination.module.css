@@ -1,0 +1,42 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.btn{
+    margin: 0 3px;
+    border: none;
+    outline: none;
+    background-color: rgb(65, 65, 65);
+    width: 25px;
+    height: 35px;
+    color: #fff;
+    transition: all ease .2s;
+}
+
+.btn:hover{
+    background-color: rgb(56, 105, 241);
+}
+
+.active{
+    background-color: rgb(56, 105, 241);
+}
+
+.portionChange{
+    width: 35px;
+    background: url(../../../assets/icons/right-arrow-pag.svg) center no-repeat;
+    background-size: cover;
+    transition: all ease .2s;
+}
+
+.portionChange.prev{
+    transform: rotate(180deg);
+}
+
+.portionChange:hover{
+    background-color: #fff;
+}

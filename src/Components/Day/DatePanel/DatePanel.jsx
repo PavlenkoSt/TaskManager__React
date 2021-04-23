@@ -1,0 +1,19 @@
+import { NavLink } from 'react-router-dom'
+import datePanelChangeDay from '../../../helpers/datePanelChangeDay'
+import s from './DatePanel.module.css'
+
+const DatePanel = ({ date, monthNames }) => {
+    const [year, month, day] = date.split('.')
+    return (
+        <header className={s.header}>
+            <NavLink className={s.calendar} to='/'></NavLink>
+            <div className={s.main}>
+                <NavLink className={s.arrPrev} to={datePanelChangeDay(date, false)}></NavLink>
+                <span className={s.date}>{`${day} ${monthNames[+month]} ${year}`}</span>
+                <NavLink className={s.arrNext} to={datePanelChangeDay(date, true)}></NavLink>
+            </div>
+        </header>
+    )
+}
+
+export default DatePanel

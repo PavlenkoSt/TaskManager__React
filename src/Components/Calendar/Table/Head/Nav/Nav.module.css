@@ -1,0 +1,76 @@
+.header{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 0;
+    background-color: rgba(87, 87, 255, 0.74);
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    font-size: 18px;
+}
+
+.text{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+.winter{
+    background: url(../../../../../assets/img/winter.jpg) center no-repeat;
+}
+.spring{
+    background: url(../../../../../assets/img/spring.jpeg) center no-repeat;
+}
+.summer{
+    background: url(../../../../../assets/img/summer.png) center no-repeat;
+}
+.autumn{
+    background: url(../../../../../assets/img/autumn.jpg) center no-repeat;
+}
+
+.month{
+    margin-right: 5px;
+}
+
+.btnCell{
+    position: relative;
+}
+
+.btnCell button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background-color: #474747;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color ease .2s;
+}
+
+.btnCell button:hover{
+    background-color: #333;
+}
+
+@media(max-width: 600px){
+    .btnCell button{
+        font-size: 0;
+        background: url(../../../../../assets/icons/right-arrow-grey.svg) #333 center no-repeat;
+        background-size: 30px;
+    }
+    .btnCell.prev button{
+        transform: rotate(180deg);
+    }
+}
+
+@media(max-width: 400px){
+    .btnCell button{
+        background-size: 20px;
+    }
+    
+}

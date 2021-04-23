@@ -1,0 +1,31 @@
+.notCompleted{
+    background-color: rgb(255, 184, 91);
+}
+.completed{
+    background-color: rgb(140, 255, 136);
+}
+
+.completed td:nth-child(2){
+    text-decoration: line-through;
+}
+
+.remove{
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: url(../../../assets/icons/remove.svg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.remove:hover{
+    transform: rotate(180deg);
+}
+
+.link{
+    text-decoration: none;
+}

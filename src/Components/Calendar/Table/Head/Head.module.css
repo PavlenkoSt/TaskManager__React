@@ -1,0 +1,15 @@
+.days{
+    background-color: #dedada;
+    color: #333;
+    font-weight: 700;
+}
+
+.days td{
+    padding: 5px;
+    text-align: center;
+}
+
+.days td:nth-child(6),
+.days td:nth-child(7){
+    color: rgb(219, 0, 0);
+}
