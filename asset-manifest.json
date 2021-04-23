@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/TaskManager__React/static/css/main.ba487455.chunk.css",
-    "main.js": "/TaskManager__React/static/js/main.1b4cda88.chunk.js",
-    "main.js.map": "/TaskManager__React/static/js/main.1b4cda88.chunk.js.map",
-    "runtime-main.js": "/TaskManager__React/static/js/runtime-main.9068f4bd.js",
-    "runtime-main.js.map": "/TaskManager__React/static/js/runtime-main.9068f4bd.js.map",
+    "main.css": "/TaskManager__React/static/css/main.d0bbc765.chunk.css",
+    "main.js": "/TaskManager__React/static/js/main.4fd905e6.chunk.js",
+    "main.js.map": "/TaskManager__React/static/js/main.4fd905e6.chunk.js.map",
+    "runtime-main.js": "/TaskManager__React/static/js/runtime-main.b80f7529.js",
+    "runtime-main.js.map": "/TaskManager__React/static/js/runtime-main.b80f7529.js.map",
     "static/css/2.3f6a4e7d.chunk.css": "/TaskManager__React/static/css/2.3f6a4e7d.chunk.css",
-    "static/js/2.9d81d4bd.chunk.js": "/TaskManager__React/static/js/2.9d81d4bd.chunk.js",
-    "static/js/2.9d81d4bd.chunk.js.map": "/TaskManager__React/static/js/2.9d81d4bd.chunk.js.map",
-    "static/js/3.38a96086.chunk.js": "/TaskManager__React/static/js/3.38a96086.chunk.js",
-    "static/js/3.38a96086.chunk.js.map": "/TaskManager__React/static/js/3.38a96086.chunk.js.map",
+    "static/js/2.7b776f07.chunk.js": "/TaskManager__React/static/js/2.7b776f07.chunk.js",
+    "static/js/2.7b776f07.chunk.js.map": "/TaskManager__React/static/js/2.7b776f07.chunk.js.map",
+    "static/js/3.4f4e32fe.chunk.js": "/TaskManager__React/static/js/3.4f4e32fe.chunk.js",
+    "static/js/3.4f4e32fe.chunk.js.map": "/TaskManager__React/static/js/3.4f4e32fe.chunk.js.map",
     "index.html": "/TaskManager__React/index.html",
     "static/css/2.3f6a4e7d.chunk.css.map": "/TaskManager__React/static/css/2.3f6a4e7d.chunk.css.map",
-    "static/css/main.ba487455.chunk.css.map": "/TaskManager__React/static/css/main.ba487455.chunk.css.map",
-    "static/js/2.9d81d4bd.chunk.js.LICENSE.txt": "/TaskManager__React/static/js/2.9d81d4bd.chunk.js.LICENSE.txt",
+    "static/css/main.d0bbc765.chunk.css.map": "/TaskManager__React/static/css/main.d0bbc765.chunk.css.map",
+    "static/js/2.7b776f07.chunk.js.LICENSE.txt": "/TaskManager__React/static/js/2.7b776f07.chunk.js.LICENSE.txt",
     "static/media/Nav.module.css": "/TaskManager__React/static/media/winter.1f60e70e.jpg",
     "static/media/TaskListHeader.module.css": "/TaskManager__React/static/media/calendar.0449cbfd.svg",
     "static/media/TaskListSetting.module.css": "/TaskManager__React/static/media/filter.dd3f3c43.svg",
@@ -22,10 +22,10 @@
     "static/media/DatePanel.module.css": "/TaskManager__React/static/media/right-arrow.867895e3.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9068f4bd.js",
+    "static/js/runtime-main.b80f7529.js",
     "static/css/2.3f6a4e7d.chunk.css",
-    "static/js/2.9d81d4bd.chunk.js",
-    "static/css/main.ba487455.chunk.css",
-    "static/js/main.1b4cda88.chunk.js"
+    "static/js/2.7b776f07.chunk.js",
+    "static/css/main.d0bbc765.chunk.css",
+    "static/js/main.4fd905e6.chunk.js"
   ]
 }
