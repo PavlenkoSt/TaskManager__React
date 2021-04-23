@@ -64,7 +64,7 @@
     }
     .current .mobile{
         background-color: rgb(52, 97, 247);
-        color: #fff;
+        color: #fff !important;
         padding: 0 6px;
     }
 
