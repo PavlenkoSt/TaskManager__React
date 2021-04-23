@@ -21,6 +21,7 @@ const BodyContainer = ({ firstDayOfActiveMonth, lastDayNumberOfActiveMonth, acti
                     text: record.text,
                     time: record.time,
                     completed: record.completed,
+                    id: record.id
                 })
             }
         })

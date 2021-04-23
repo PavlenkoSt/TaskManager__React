@@ -62,7 +62,7 @@ class Menu extends React.Component{
           <Nav 
             isOpen={this.state.menuOpen}
             onStateChange={this.handleStateChange}
-            customBurgerIcon={<img src='./menu.svg'/>}
+            customBurgerIcon={<img src='./menu.svg' alt='Menu'/>}
             outerContainer={this.props.outerContainer}
             pageWrapId={this.props.pageWrapId}
           >

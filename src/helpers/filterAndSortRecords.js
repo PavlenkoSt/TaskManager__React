@@ -27,6 +27,7 @@ export default (records, filter, sort) => {
                 case 'new': {
                     return +b.date.split('.').join('') - +a.date.split('.').join('')
                 }
+                default: return a - b
             }
         })
         

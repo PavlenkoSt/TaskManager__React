@@ -12,9 +12,7 @@ const TasksTable = ({tasks}) => {
                         <td>Удалить</td>
                     </tr>
                 </thead>
-                <tbody>
-                    {tasks}
-                </tbody>
+                {tasks}
             </table>
         </>
     )

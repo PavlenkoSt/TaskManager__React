@@ -10,7 +10,7 @@ const Search = ({ months, initialize, activeDate, handleSubmit }) => {
         initialize({ year: activeDate.year, month: activeDate.month })
     }, [activeDate])
     
-    const options = months.map((month, i) => <option value={i}>{month}</option>)
+    const options = months.map((month, i) => <option value={i} key={i} >{month}</option>)
     return (
         <form onSubmit={handleSubmit} className={s.form}>
             <h2 className={s.header}>Найти месяц:</h2>

@@ -13,3 +13,8 @@ html{
 body{
     font-family: 'Vollkorn', serif;
 }
+
+#outerContainer{
+    position: absolute;
+    width: 100%;
+}

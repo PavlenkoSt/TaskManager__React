@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom'
+import { CSSTransition } from 'react-transition-group'
 import addZeroToDate from '../../../helpers/addZeroToDate'
 import dateMonthPlusOne from '../../../helpers/dateMonthPlusOne'
 import s from '../../Day/TaskItem/TaskItem.module.css'
+import '../TaskListAnim.css'
 
-const TaskListItem = ({ id, completed, text, date, time, changeCompletedStatusOfRecord, deleteRecord, getToast, setTotalCount, recordsLength }) => {
+const TaskListItem = ({ id, completed, text, date, time, changeCompletedStatusOfRecord, deleteRecord, getToast }) => {
 
     const checkboxHandler = () => {
         changeCompletedStatusOfRecord(id, !completed)

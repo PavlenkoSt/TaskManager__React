@@ -1,19 +1,15 @@
 import { useEffect } from 'react'
 import { compose } from 'redux'
-import { Field, reduxForm } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import TaskListFilter from './TaskListFilter/TaskListFilter'
 import s from './TaskListSetting.module.css'
 import TaskListSort from './TaskListSort/TaskListSort'
 
-const TaskListSetting = ({ initialize, handleSubmit, tasks }) => {
+const TaskListSetting = ({ initialize, handleSubmit }) => {
 
     useEffect(() => {
         initialize({ filter: 'all', sort: 'lastAdded' })
     }, [])
-
-    if(!tasks.length){
-        return null
-    }
 
     return (
         <>

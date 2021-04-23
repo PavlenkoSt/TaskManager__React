@@ -59,7 +59,7 @@ const TaskListContainer = ({ records, changeCompletedStatusOfRecord, deleteRecor
 
     const filteredRecords = filterAndSortRecords(records, filter, sort)
     const tasksWithPaginationClassify = mergeRecordsForPagination(filteredRecords, countOnPage)
-    const tasks = tasksWithPaginationClassify[currentPage - 1] ? tasksWithPaginationClassify[currentPage - 1]
+    let tasks = tasksWithPaginationClassify[currentPage - 1] ? tasksWithPaginationClassify[currentPage - 1]
         .map(record => <TaskListItem 
                             key={record.id}
                             id={record.id}
@@ -70,8 +70,6 @@ const TaskListContainer = ({ records, changeCompletedStatusOfRecord, deleteRecor
                             changeCompletedStatusOfRecord={changeCompletedStatusOfRecord}
                             deleteRecord={deleteRecord}
                             getToast={getToast}
-                            setTotalCount={setTotalCount}
-                            recordsLength={records.length}
                         />) : []
 
     const onSubmit = formData => {
