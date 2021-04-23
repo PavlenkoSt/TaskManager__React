@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TaskManager__React/static/css/main.0d193b69.chunk.css",
+    "main.css": "/TaskManager__React/static/css/main.41b3b382.chunk.css",
     "main.js": "/TaskManager__React/static/js/main.4fd905e6.chunk.js",
     "main.js.map": "/TaskManager__React/static/js/main.4fd905e6.chunk.js.map",
     "runtime-main.js": "/TaskManager__React/static/js/runtime-main.b80f7529.js",
@@ -12,7 +12,7 @@
     "static/js/3.4f4e32fe.chunk.js.map": "/TaskManager__React/static/js/3.4f4e32fe.chunk.js.map",
     "index.html": "/TaskManager__React/index.html",
     "static/css/2.3f6a4e7d.chunk.css.map": "/TaskManager__React/static/css/2.3f6a4e7d.chunk.css.map",
-    "static/css/main.0d193b69.chunk.css.map": "/TaskManager__React/static/css/main.0d193b69.chunk.css.map",
+    "static/css/main.41b3b382.chunk.css.map": "/TaskManager__React/static/css/main.41b3b382.chunk.css.map",
     "static/js/2.7b776f07.chunk.js.LICENSE.txt": "/TaskManager__React/static/js/2.7b776f07.chunk.js.LICENSE.txt",
     "static/media/Nav.module.css": "/TaskManager__React/static/media/winter.1f60e70e.jpg",
     "static/media/TaskListHeader.module.css": "/TaskManager__React/static/media/calendar.0449cbfd.svg",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.b80f7529.js",
     "static/css/2.3f6a4e7d.chunk.css",
     "static/js/2.7b776f07.chunk.js",
-    "static/css/main.0d193b69.chunk.css",
+    "static/css/main.41b3b382.chunk.css",
     "static/js/main.4fd905e6.chunk.js"
   ]
 }
