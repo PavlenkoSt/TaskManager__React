@@ -1,7 +1,7 @@
 import currentDate from "../helpers/currentDate"
 import { addToLocalStore } from "../localStore/localStore"
 
-type RecordType = {
+export type RecordType = {
     id: number
     date: string
     text: string

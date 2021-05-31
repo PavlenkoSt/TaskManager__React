@@ -1,4 +1,6 @@
-export default (records, filter, sort) => {
+import { RecordType } from './../Redux/calendarReducer'
+
+export default (records: Array<RecordType>, filter: string, sort: string) => {
     const filteredRecords = records
         .filter(record => {
             switch(filter){
@@ -27,7 +29,7 @@ export default (records, filter, sort) => {
                 case 'new': {
                     return +b.date.split('.').join('') - +a.date.split('.').join('')
                 }
-                default: return a - b
+                default: return a.id - b.id
             }
         })
         
