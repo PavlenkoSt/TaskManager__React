@@ -1,10 +1,10 @@
-import { FC, useEffect } from "react"
+import { ComponentType, useEffect } from "react"
 import { useSelector } from "react-redux"
-import { Field, reduxForm } from "redux-form"
+import { Field, InjectedFormProps, reduxForm } from "redux-form"
 import { activeDateSelector, dateNamesListSelector } from "../../../Redux/calendarSelectors"
 import s from './Search.module.css'
 
-const Search: FC<any> = ({ initialize, handleSubmit }) => {
+const Search: ComponentType<InjectedFormProps<{}, {}, string>> = ({ initialize, handleSubmit }) => {
     const activeDate = useSelector(activeDateSelector)
     const dateNamesList = useSelector(dateNamesListSelector)
     const months = dateNamesList.months
