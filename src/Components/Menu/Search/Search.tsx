@@ -1,10 +1,13 @@
-import { useEffect } from "react"
-import { compose } from "redux"
+import { FC, useEffect } from "react"
+import { useSelector } from "react-redux"
 import { Field, reduxForm } from "redux-form"
+import { activeDateSelector, dateNamesListSelector } from "../../../Redux/calendarSelectors"
 import s from './Search.module.css'
 
-
-const Search = ({ months, initialize, activeDate, handleSubmit }) => {
+const Search: FC<any> = ({ initialize, handleSubmit }) => {
+    const activeDate = useSelector(activeDateSelector)
+    const dateNamesList = useSelector(dateNamesListSelector)
+    const months = dateNamesList.months
 
     useEffect(() => {
         initialize({ year: activeDate.year, month: activeDate.month })
@@ -23,6 +26,4 @@ const Search = ({ months, initialize, activeDate, handleSubmit }) => {
     )
 }
 
-export default compose(
-    reduxForm({ form: 'search' })
-)(Search)
+export default reduxForm({ form: 'search' })(Search)

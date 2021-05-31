@@ -7,11 +7,22 @@ import { connect } from 'react-redux'
 import { elastic as Nav } from 'react-burger-menu'
 import { NavLink } from 'react-router-dom'
 import Search from './Search/Search'
+import { AppStateType } from '../../Redux/reduxStore'
 
+type MenuPropsType = {
+  pageWrapId: string
+  outerContainer: string
+  changeActiveDateToCurrentDate: () => void
+  changeActiveMonthAndYear: (month: number, year: number) => void
+}
 
-class Menu extends React.Component{
+type StateType = {
+  menuOpen: boolean
+}
 
-    constructor (props) {
+class Menu extends React.Component<MenuPropsType, StateType>{
+
+    constructor (props: any) {
         super(props)
         this.state = {
           menuOpen: false
@@ -22,7 +33,7 @@ class Menu extends React.Component{
       toast.configure()
     }
 
-    handleStateChange = (state) => {
+    handleStateChange = (state: any) => {
       this.setState({menuOpen: state.isOpen})  
     }
       
@@ -35,7 +46,7 @@ class Menu extends React.Component{
       this.closeMenu()
     }
 
-    onSubmit = (formData) => {
+    onSubmit = (formData: any) => {
       if(formData.year){
         this.props.changeActiveMonthAndYear(+formData.year, +formData.month)
         this.closeMenu()
@@ -44,12 +55,12 @@ class Menu extends React.Component{
       }
     }
 
-    getToast = (text, success) => {
+    getToast = (text: string, success: boolean) => {
       const options = { autoClose: 3000 }
       success ? toast.success(text, options) : toast.error(text, options)
     }
 
-    onStateChange = (state) => this.handleStateChange(state)
+    onStateChange = (state: StateType) => this.handleStateChange(state)
 
     getLinkAdressForTodayTasks = () => {
         const date = new Date()
@@ -63,22 +74,17 @@ class Menu extends React.Component{
             isOpen={this.state.menuOpen}
             onStateChange={this.handleStateChange}
             customBurgerIcon={<img src='./menu.svg' alt='Menu'/>}
-            outerContainer={this.props.outerContainer}
+            outerContainerId={this.props.outerContainer}
             pageWrapId={this.props.pageWrapId}
           >
             <button className={s.btn} onClick={this.getCurrentDate}>К текущему месяцу</button>
             <NavLink className={s.btn} onClick={() => this.closeMenu()} to={`/day/${this.getLinkAdressForTodayTasks()}`}>Задачи на сегодня</NavLink>
             <NavLink className={s.btn} onClick={() => this.closeMenu()} to='/taskList'>Список всех задач</NavLink>
-            <Search months={this.props.months} activeDate={this.props.activeDate} onSubmit={this.onSubmit}/>
+            <Search onSubmit={this.onSubmit}/>
           </Nav>
         </div>
       )
     }
 }
 
-const mapStateToProps = state => ({
-    activeDate: state.calendar.activeDate,
-    currentDate: state.calendar.currentDate
-})
-
-export default connect(mapStateToProps, { changeActiveDateToCurrentDate, changeActiveMonthAndYear })(Menu)
+export default connect(null, { changeActiveDateToCurrentDate, changeActiveMonthAndYear })(Menu)
