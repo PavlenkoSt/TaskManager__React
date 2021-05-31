@@ -1,6 +1,19 @@
 import currentDate from "../helpers/currentDate"
 import { addToLocalStore } from "../localStore/localStore"
 
+type RecordType = {
+    id: number
+    date: string
+    text: string
+    time: string
+    completed: boolean
+}
+
+type SettingType = {
+    filter: string
+    sort: string
+}
+
 const CHANGE_ACTIVE_MONTH = 'CHANGE_ACTIVE_MONTH'
 const CHANGE_COMPLETED_STATUS_OF_RECORD = 'CHANGE_COMPLETED_STATUS_OF_RECORD'
 const DELETE_RECORD = 'DELETE_RECORD'
@@ -12,17 +25,16 @@ const CHANGE_ACTIVE_MONTH_AND_YEAR = 'CHANGE_ACTIVE_MONTH_AND_YEAR'
 const CHANGE_SETTINGS = 'CHANGE_SETTINGS'
 const SYNCHRONIZE_RECORD_LIST_FROM_LOCAL_STORAGE = 'SYNCHRONIZE_RECORD_LIST_FROM_LOCAL_STORAGE'
 
-export const changeActiveMonth = month => ({ type: CHANGE_ACTIVE_MONTH, month })
-export const changeCompletedStatusOfRecord = (id, status) => ({ type: CHANGE_COMPLETED_STATUS_OF_RECORD, id, status })
-export const deleteRecord = id => ({ type: DELETE_RECORD, id })
-export const addNewRecord = record => ({ type: ADD_NEW_RECORD, record })
+export const changeActiveMonth = (month: number) => ({ type: CHANGE_ACTIVE_MONTH, month })
+export const changeCompletedStatusOfRecord = (id: number, status: boolean) => ({ type: CHANGE_COMPLETED_STATUS_OF_RECORD, id, status })
+export const deleteRecord = (id: number) => ({ type: DELETE_RECORD, id })
+export const addNewRecord = (record: RecordType) => ({ type: ADD_NEW_RECORD, record })
 export const changeActiveDateToCurrentDate = () => ({ type: CHANGE_ACTIVE_DATE_TO_CURRENT_DATE })
-export const setTotalCount = totalCount => ({ type: SET_TOTAL_COUNT, totalCount })
-export const setCurrentPage = currentPage => ({ type: SET_CURRENT_PAGE, currentPage })
-export const changeActiveMonthAndYear = (year, month) => ({ type: CHANGE_ACTIVE_MONTH_AND_YEAR, year, month })
-export const changeSettings = settings => ({ type: CHANGE_SETTINGS, settings })
-export const synchronizeRecordListFromLocalStorage = recordList => ({ type: SYNCHRONIZE_RECORD_LIST_FROM_LOCAL_STORAGE, recordList })
-
+export const setTotalCount = (totalCount: number) => ({ type: SET_TOTAL_COUNT, totalCount })
+export const setCurrentPage = (currentPage: number) => ({ type: SET_CURRENT_PAGE, currentPage })
+export const changeActiveMonthAndYear = (year: number, month: number) => ({ type: CHANGE_ACTIVE_MONTH_AND_YEAR, year, month })
+export const changeSettings = (settings: SettingType) => ({ type: CHANGE_SETTINGS, settings })
+export const synchronizeRecordListFromLocalStorage = (recordList: Array<RecordType>) => ({ type: SYNCHRONIZE_RECORD_LIST_FROM_LOCAL_STORAGE, recordList })
 
 const initialValue = {
     currentDate: currentDate(),
@@ -55,7 +67,9 @@ const initialValue = {
     portionsSize: 10,
 }
 
-const calendarReducer = (state = initialValue, action) => {
+type InitialValueType = typeof initialValue
+
+const calendarReducer = (state = initialValue, action: any): InitialValueType => {
     switch(action.type){
         case CHANGE_ACTIVE_MONTH: {
             return {
