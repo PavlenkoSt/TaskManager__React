@@ -1,6 +1,11 @@
+import { FC, ReactNode } from 'react'
 import s from './TaskListTable.module.css'
 
-const TaskListTable = ({ tasks }) => {
+type TaskListTablePropsType = {
+    tasks: ReactNode
+}
+
+const TaskListTable: FC<TaskListTablePropsType> = ({ tasks }) => {
     return (
         <table className={s.table}>
             <thead>

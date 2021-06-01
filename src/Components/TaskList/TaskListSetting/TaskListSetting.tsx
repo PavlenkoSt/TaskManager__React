@@ -1,11 +1,10 @@
-import { useEffect } from 'react'
-import { compose } from 'redux'
-import { reduxForm } from 'redux-form'
+import { ComponentType, useEffect } from 'react'
+import { InjectedFormProps, reduxForm } from 'redux-form'
 import TaskListFilter from './TaskListFilter/TaskListFilter'
 import s from './TaskListSetting.module.css'
 import TaskListSort from './TaskListSort/TaskListSort'
 
-const TaskListSetting = ({ initialize, handleSubmit }) => {
+const TaskListSetting :ComponentType<InjectedFormProps<{}, {}, string>>  = ({ initialize, handleSubmit }) => {
 
     useEffect(() => {
         initialize({ filter: 'all', sort: 'lastAdded' })
@@ -27,6 +26,4 @@ const TaskListSetting = ({ initialize, handleSubmit }) => {
     )
 }
 
-export default compose(
-    reduxForm({ form: 'settings' })
-)(TaskListSetting)
+export default reduxForm({ form: 'settings' })(TaskListSetting)

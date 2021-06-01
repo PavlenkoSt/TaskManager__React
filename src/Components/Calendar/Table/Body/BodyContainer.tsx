@@ -1,7 +1,7 @@
 import { ReactElement } from "react"
 import { useSelector } from "react-redux"
 import { JsxElement } from "typescript"
-import { activeDateSelector, currentDateSelector, recordsSelector } from "../../../../Redux/calendarSelectors"
+import { activeDateSelector, recordsSelector } from "../../../../Redux/calendarSelectors"
 import Body from "./Body"
 import s from './Body.module.css'
 import Item from "./Item/Item"

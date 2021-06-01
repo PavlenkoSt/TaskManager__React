@@ -1,18 +1,30 @@
+import { FC } from 'react'
+import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { CSSTransition } from 'react-transition-group'
 import addZeroToDate from '../../../helpers/addZeroToDate'
 import dateMonthPlusOne from '../../../helpers/dateMonthPlusOne'
+import { changeCompletedStatusOfRecord, deleteRecord } from '../../../Redux/calendarReducer'
 import s from '../../Day/TaskItem/TaskItem.module.css'
 import '../TaskListAnim.css'
 
-const TaskListItem = ({ id, completed, text, date, time, changeCompletedStatusOfRecord, deleteRecord, getToast }) => {
+type TaskListItemPropsType = {
+    id: number
+    completed: boolean
+    text: string
+    date: string 
+    time: string
+    getToast: (text: string, success: boolean) => void
+}
+
+const TaskListItem: FC<TaskListItemPropsType> = ({ id, completed, text, date, time, getToast }) => {
+    const dispatch = useDispatch()
 
     const checkboxHandler = () => {
-        changeCompletedStatusOfRecord(id, !completed)
+        dispatch(changeCompletedStatusOfRecord(id, !completed))
     }
 
     const deleteTask = () => {
-        deleteRecord(id)
+        dispatch(deleteRecord(id))
         getToast('Запись успешно удалена!', true)
     }
 

@@ -6,8 +6,17 @@ import TaskListSetting from "./TaskListSetting/TaskListSetting"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import './TaskListAnim.css'
 import Pagination from "../common/Pagination/Pagination"
+import { FC } from "react"
 
-const TaskList = ({ totalCount, currentPage, portionsSize, countOnPage, setCurrentPage, date, time, onSubmitSetting, tasks, onSubmit }) => {
+type TaskListPropsType = {
+    date: string
+    time: string
+    tasks: Array<JSX.Element>
+    onSubmitSetting: (formData: any) => void
+    onSubmit: (formData: any) => void
+}
+
+const TaskList: FC<TaskListPropsType> = ({ date, time, onSubmitSetting, tasks, onSubmit }) => {
 
     const tasksWithAnimation = <TransitionGroup component='tbody'>
         {tasks.map(task => <CSSTransition classNames='item' timeout={300} >{task}</CSSTransition>)}

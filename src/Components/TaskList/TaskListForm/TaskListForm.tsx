@@ -1,9 +1,9 @@
 import s from '../../Day/TaskForm/TaskForm.module.css'
-import { reduxForm, Field } from "redux-form";
-import { compose } from 'redux';
+import { reduxForm, Field, InjectedFormProps } from "redux-form"
+import { ComponentType } from 'react'
 
 
-const TaskListForm = ({ handleSubmit }) => {
+const TaskListForm :ComponentType<InjectedFormProps<{}, {}, string>> = ({ handleSubmit }) => {
     return (
         <>
             <a className={s.btnCollapsed} data-bs-toggle="collapse" href="#form" role="button" aria-expanded="false" aria-controls="form">+</a>
@@ -30,6 +30,4 @@ const TaskListForm = ({ handleSubmit }) => {
 
 
 
-export default compose(
-    reduxForm({ form: 'add-task-list' })
-)(TaskListForm)
+export default reduxForm({ form: 'add-task-list' })(TaskListForm)

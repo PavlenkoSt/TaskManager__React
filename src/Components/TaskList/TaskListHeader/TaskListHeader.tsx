@@ -1,7 +1,13 @@
+import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './TaskListHeader.module.css'
 
-const TaskListHeader = ({ time, date }) => {
+type TaskListHeaderPropsType = {
+    time: string
+    date: string
+}
+
+const TaskListHeader: FC<TaskListHeaderPropsType> = ({ time, date }) => {
     return (
         <header className={s.header}>
             <NavLink className={s.toCalendar} to='/'></NavLink>

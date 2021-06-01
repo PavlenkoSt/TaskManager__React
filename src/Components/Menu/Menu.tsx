@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 import { elastic as Nav } from 'react-burger-menu'
 import { NavLink } from 'react-router-dom'
 import Search from './Search/Search'
-import { AppStateType } from '../../Redux/reduxStore'
 
 type MenuPropsType = {
   pageWrapId: string
