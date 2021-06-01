@@ -18,9 +18,9 @@ const App = () => {
 
     return (
         <div id='app'>
-        <Route path='/' exact>{withTransition(Calendar)}</Route>
-        <Route path='/day' component={Day} />
-        <Route path='/taskList'>{withTransition(TaskListContainer)}</Route>
+            <Route path='/' exact>{withTransition(Calendar)}</Route>
+            <Route path='/day' component={Day} />
+            <Route path='/taskList'>{withTransition(TaskListContainer)}</Route>
         </div>
     )
 }
