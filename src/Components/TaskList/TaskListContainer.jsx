@@ -11,7 +11,7 @@ import addZeroToDate from "../../helpers/addZeroToDate"
 import TaskListItem from "./TaskListItem/TaskListItem"
 import { connect } from "react-redux"
 import filterAndSortRecords from "../../helpers/filterAndSortRecords"
-
+ 
 
 const TaskListContainer = ({ records, changeCompletedStatusOfRecord, deleteRecord, totalCount, setTotalCount, currentPage, portionsSize, countOnPage, setCurrentPage, reset, addNewRecord, filter, changeSettings, sort }) => {
 
