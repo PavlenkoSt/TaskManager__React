@@ -1,13 +1,25 @@
+import { FC } from 'react'
 import s from './TaskItem.module.css'
+import { changeCompletedStatusOfRecord, deleteRecord , RecordType } from '../../../Redux/calendarReducer'
+import { useDispatch } from 'react-redux'
 
-const TaskItem = ({ task, changeCompletedStatusOfRecord, deleteRecord, getToast }) => {
+type TaskItemPropsType = {
+    task: RecordType
+    getToast: (text: string, success: boolean) => void
+}
+
+const TaskItem: FC<TaskItemPropsType> = ({ task, getToast }) => {
+    const dispatch = useDispatch()
+
     const checkboxHandler = () => {
-        changeCompletedStatusOfRecord(task.id, !task.completed)
+        dispatch(changeCompletedStatusOfRecord(task.id, !task.completed))
     }
+
     const deleteItem = () => {
-        deleteRecord(task.id)
+        dispatch(deleteRecord(task.id))
         getToast('Запись успешно удалена!', true)
     }
+
     return (
         <tr className={task.completed ? s.completed : s.notCompleted}>
             <td>

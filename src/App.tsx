@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Route, withRouter } from 'react-router'
 import './App.css'
 import Calendar from './Components/Calendar/Calendar'
-import DayContainer from './Components/Day/DayContainer'
+import Day from './Components/Day/Day'
 import TaskListContainer from './Components/TaskList/TaskListContainer'
 import withTransition from './HOC/withTransition'
 import { getFromLocalStore } from './localStore/localStore'
@@ -19,7 +19,7 @@ const App = () => {
     return (
         <div id='app'>
         <Route path='/' exact>{withTransition(Calendar)}</Route>
-        <Route path='/day' component={DayContainer} />
+        <Route path='/day' component={Day} />
         <Route path='/taskList'>{withTransition(TaskListContainer)}</Route>
         </div>
     )

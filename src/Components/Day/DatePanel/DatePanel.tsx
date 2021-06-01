@@ -1,9 +1,20 @@
+import { FC } from 'react'
+import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import datePanelChangeDay from '../../../helpers/datePanelChangeDay'
+import { dateNamesListSelector } from '../../../Redux/calendarSelectors'
 import s from './DatePanel.module.css'
 
-const DatePanel = ({ date, monthNames }) => {
+type DatePanelPropsType = {
+    date: string
+}
+
+const DatePanel: FC<DatePanelPropsType> = ({ date }) => {
+    const dateNamesList = useSelector(dateNamesListSelector)
+    const monthNames = dateNamesList.months
+
     const [year, month, day] = date.split('.')
+    
     return (
         <header className={s.header}>
             <NavLink className={s.calendar} to='/'></NavLink>
