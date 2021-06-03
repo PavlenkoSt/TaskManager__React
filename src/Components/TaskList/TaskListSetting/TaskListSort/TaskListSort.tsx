@@ -1,5 +1,5 @@
 import { Field } from "redux-form"
-import s from '../TaskListSetting.module.css'
+import s from '../TaskListSetting.module.scss'
 
 
 const TaskListSort = () => {

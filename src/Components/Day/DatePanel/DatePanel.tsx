@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import datePanelChangeDay from '../../../helpers/datePanelChangeDay'
 import { dateNamesListSelector } from '../../../Redux/calendarSelectors'
-import s from './DatePanel.module.css'
+import s from './DatePanel.module.scss'
 
 type DatePanelPropsType = {
     date: string

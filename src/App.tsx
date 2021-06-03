@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Route, withRouter } from 'react-router'
-import './App.css'
+import './App.scss'
 import Calendar from './Components/Calendar/Calendar'
 import Day from './Components/Day/Day'
 import TaskListContainer from './Components/TaskList/TaskListContainer'

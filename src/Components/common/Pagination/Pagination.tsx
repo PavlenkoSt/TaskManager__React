@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentPage } from '../../../Redux/calendarReducer'
 import { countOnPageSelector, currentPageSelector, portionsSizeSelector, totalCountSelector } from '../../../Redux/calendarSelectors'
-import s from './Pagination.module.css'
+import s from './Pagination.module.scss'
 
 const Pagination = () => {
     const dispatch = useDispatch()

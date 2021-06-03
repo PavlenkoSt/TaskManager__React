@@ -3,10 +3,11 @@
 }
 .completed{
     background-color: rgb(140, 255, 136);
-}
-
-.completed td:nth-child(2){
-    text-decoration: line-through;
+    & td{
+        &:nth-child(2){
+            text-decoration: line-through;
+        }
+    }
 }
 
 .remove{
@@ -20,10 +21,9 @@
     margin: 0 auto;
     cursor: pointer;
     transition: all ease .2s;
-}
-
-.remove:hover{
-    transform: rotate(180deg);
+    &:hover{
+        transform: rotate(180deg);
+    }
 }
 
 .link{

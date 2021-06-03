@@ -1,7 +1,7 @@
 import { JSXElementConstructor } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
-import './withTransition.css'
+import './withTransition.scss'
 
 const withTransition = (Component: JSXElementConstructor<{}>) => {
     return ({match}: CSSTransitionProps) => {

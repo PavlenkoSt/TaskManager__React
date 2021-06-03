@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { JsxElement } from "typescript"
 import { activeDateSelector, recordsSelector } from "../../../../Redux/calendarSelectors"
 import Body from "./Body"
-import s from './Body.module.css'
+import s from './Body.module.scss'
 import Item from "./Item/Item"
 
 type SearchTasksType = {

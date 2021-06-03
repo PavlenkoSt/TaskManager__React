@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import s from './TaskListTable.module.css'
+import s from './TaskListTable.module.scss'
 
 type TaskListTablePropsType = {
     tasks: ReactNode

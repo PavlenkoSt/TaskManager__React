@@ -1,10 +1,10 @@
 import TaskListHeader from "./TaskListHeader/TaskListHeader"
 import TaskListTable from "./TaskListTable/TaskListTable"
-import s from './TaskList.module.css'
+import s from './TaskList.module.scss'
 import TaskListForm from "./TaskListForm/TaskListForm"
 import TaskListSetting from "./TaskListSetting/TaskListSetting"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
-import './TaskListAnim.css'
+import './TaskListAnim.scss'
 import Pagination from "../common/Pagination/Pagination"
 import { FC } from "react"
 

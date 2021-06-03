@@ -1,0 +1,39 @@
+.table{
+    width: 100%;
+    color: #333;
+    border-collapse: separate !important;
+    & thead{
+        font-weight: 700;
+    }
+    & tr{
+        & td{
+            padding: 10px;
+            &:first-child{
+                width: 10%;
+                text-align: center;
+            }
+            &:nth-child(2){
+                width: 70%;
+            }
+            &:nth-child(3){
+                width: 10%;
+                text-align: center;
+            }
+            &:last-child{
+                width: 10%;
+                text-align: center;
+            }
+
+            @media(max-width: 600px){
+                padding: 10px 5px;
+                font-size: 15px;
+            }
+            @media(max-width: 400px){
+                font-size: 13px;
+            }
+            @media(max-width: 320px){
+                font-size: 12px;
+            }
+        }
+    }
+}

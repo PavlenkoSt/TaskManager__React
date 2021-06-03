@@ -1,6 +1,6 @@
-import s from './TaskForm.module.css'
-import { reduxForm, Field, InjectedFormProps } from "redux-form";
-import { ComponentType } from 'react';
+import s from './TaskForm.module.scss'
+import { reduxForm, Field, InjectedFormProps } from "redux-form"
+import { ComponentType } from 'react'
 
 
 const TaskForm: ComponentType<InjectedFormProps<{}, {}, string>> = ({ handleSubmit }) => {

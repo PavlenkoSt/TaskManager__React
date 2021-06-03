@@ -1,8 +1,8 @@
 import TasksTable from "./TasksTable/TasksTable"
 import DatePanel from "./DatePanel/DatePanel"
 import TaskForm from "./TaskForm/TaskForm"
-import s from './Day.module.css'
-import './DayAnim.css'
+import s from './Day.module.scss'
+import './DayAnim.scss'
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import { FC, useEffect } from "react"
 import { toast } from 'react-toastify'

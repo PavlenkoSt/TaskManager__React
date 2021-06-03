@@ -12,23 +12,19 @@
     text-align: center;
     transition: all ease .2s;
     border: 3px solid #373a47;
-}
+    &:last-child{
+        margin-bottom: 0;
+    }
+    &:hover{
+        color: #000;
+        border: 3px solid #000;
+    }
 
-.btn:hover{
-    color: #000;
-    border: 3px solid #000;
-}
-
-.btn:last-child{
-    margin-bottom: 0;
-}
-
-@media(max-width: 600px){
-    .btn{
+    @media(max-width: 600px){
         min-width: auto;
         width: 145px;
         font-size: 13px;
         padding: 5px;
         margin-bottom: 10px;
     }
-  }
+}

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
-import s from './TaskListHeader.module.css'
+import s from './TaskListHeader.module.scss'
 
 type TaskListHeaderPropsType = {
     time: string

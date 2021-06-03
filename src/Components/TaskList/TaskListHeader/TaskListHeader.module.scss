@@ -17,10 +17,13 @@
     background: url(../../../assets/icons/calendar.svg) center no-repeat;
     background-size: cover;
     transition: all ease-in .1s;
-}
+    &:hover{
+        transform: translateY(-50%) scale(1.1);
+    }
 
-.toCalendar:hover{
-    transform: translateY(-50%) scale(1.1);
+    @media(max-width: 400px){
+        left: 10px;
+    }
 }
 
 .date{
@@ -28,19 +31,11 @@
     font-weight: 700;
     font-size: 16px;
     color: #fff;
-}
 
-@media(max-width: 768px){
-    .date{
+    @media(max-width: 768px){
         padding: 0 20px;
     }
-}
-
-@media(max-width: 400px){
-    .date{
+    @media(max-width: 400px){
         padding: 0 10px;
-    }
-    .toCalendar{
-        left: 10px;
     }
 }

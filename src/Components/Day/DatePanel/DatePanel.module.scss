@@ -5,6 +5,14 @@
     font-weight: 700;
     color: #fff;
     position: relative;
+
+    @media(max-width: 600px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
 }
 
 .main{
@@ -26,10 +34,15 @@
     background: url(../../../assets/icons/calendar.svg) center no-repeat;
     background-size: cover;
     transition: all ease-in .1s;
-}
+    &:hover{
+        transform: translateY(-50%) scale(1.1);
+    }
 
-.calendar:hover{
-    transform: translateY(-50%) scale(1.1);
+    @media(max-width: 600px){
+        position: relative;
+        top: 0;
+        left: 0;
+    }
 }
 
 .arrPrev,
@@ -46,32 +59,16 @@
 .arrNext{
     transform: translateY(-50%);
     right: -40px;
-}
-
-.arrNext:hover{
-    transform: translateY(-50%) scale(1.1);
+    &:hover{
+        transform: translateY(-50%) scale(1.1);
+    }
 }
 
 .arrPrev{
     transform: translateY(-50%) rotate(180deg);
     left: -40px;
-}
-
-.arrPrev:hover{
-    transform: translateY(-50%) rotate(180deg) scale(1.1); 
-}
-
-@media(max-width: 600px){
-    .calendar{
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    .header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 25px;
-        padding-bottom: 10px;
+    &:hover{
+        transform: translateY(-50%) rotate(180deg) scale(1.1); 
     }
 }
+

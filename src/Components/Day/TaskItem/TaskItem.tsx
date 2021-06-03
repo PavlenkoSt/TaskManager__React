@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import s from './TaskItem.module.css'
+import s from './TaskItem.module.scss'
 import { changeCompletedStatusOfRecord, deleteRecord , RecordType } from '../../../Redux/calendarReducer'
 import { useDispatch } from 'react-redux'
 

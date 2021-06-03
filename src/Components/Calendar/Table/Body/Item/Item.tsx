@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { activeDateSelector, currentDateSelector } from '../../../../../Redux/calendarSelectors'
-import s from './Item.module.css'
+import s from './Item.module.scss'
 
 type ItemPropsType = {
     day: number

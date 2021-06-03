@@ -1,5 +1,5 @@
-import './Menu.css'
-import s from './Menu.module.css'
+import './Menu.scss'
+import s from './Menu.module.scss'
 import React from "react"
 import { toast } from 'react-toastify'
 import { changeActiveDateToCurrentDate, changeActiveMonthAndYear } from '../../Redux/calendarReducer'

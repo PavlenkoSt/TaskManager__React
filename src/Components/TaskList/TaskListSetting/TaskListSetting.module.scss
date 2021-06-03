@@ -11,10 +11,9 @@
     margin: 0 auto;
     margin-top: 10px;
     transition: all ease .2s;
-}
-
-.btnToggle:hover{
-    transform: rotate(180deg);
+    &:hover{
+        transform: rotate(180deg);
+    }
 }
 
 .form{
@@ -23,23 +22,45 @@
     color: #333;
     padding: 15px;
     box-shadow: 0 0 2px #333;
+
+    @media(max-width: 600px){
+        justify-content: center;
+    }
 }
 
 .flex{
     display: flex;
     justify-content: space-around;
+
+    @media(max-width: 600px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .header{
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
+
+    @media(max-width: 600px){
+        text-align: center;
+    }
 }
 
 .select{
     width: 300px;
     border-radius: 0;
     margin-top: 10px;
+
+    @media(max-width: 600px){
+        margin-top: 0;
+    }
+    @media(max-width: 400px){
+        width: 200px;
+        font-size: 14px;
+    }
 }
 
 .btn{
@@ -55,45 +76,21 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto 20px;
-}
-
-.btn:hover{
-    font-size: 18px;
+    &:hover{
+        font-size: 18px;
+    }
+    
+    @media(max-width: 400px){
+        height: 35px;
+        width: 200px;
+        font-size: 15px;
+    }
 }
 
 .block{
     margin: 20px 0;
-}
 
-@media(max-width: 600px){
-    .form{
-        justify-content: center;
-    }
-    .flex{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .select{
-        margin-top: 0;
-    }
-    .block{
+    @media(max-width: 600px){
         margin-bottom: 10px;
-    }
-    .header{
-        text-align: center;
-    }
-}
-
-
-@media(max-width: 400px){
-    .select{
-        width: 200px;
-        font-size: 14px;
-    }
-    .btn{
-        height: 35px;
-        width: 200px;
-        font-size: 15px;
     }
 }

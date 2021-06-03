@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import s from './Body.module.css'
+import s from './Body.module.scss'
 
 type BodyPropsType = {
     getValidCalendar: () => ReactNode

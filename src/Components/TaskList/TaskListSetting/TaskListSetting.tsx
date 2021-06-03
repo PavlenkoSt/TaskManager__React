@@ -1,7 +1,7 @@
 import { ComponentType, useEffect } from 'react'
 import { InjectedFormProps, reduxForm } from 'redux-form'
 import TaskListFilter from './TaskListFilter/TaskListFilter'
-import s from './TaskListSetting.module.css'
+import s from './TaskListSetting.module.scss'
 import TaskListSort from './TaskListSort/TaskListSort'
 
 const TaskListSetting :ComponentType<InjectedFormProps<{}, {}, string>>  = ({ initialize, handleSubmit }) => {

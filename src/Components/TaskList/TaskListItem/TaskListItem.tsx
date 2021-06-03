@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 import addZeroToDate from '../../../helpers/addZeroToDate'
 import dateMonthPlusOne from '../../../helpers/dateMonthPlusOne'
 import { changeCompletedStatusOfRecord, deleteRecord } from '../../../Redux/calendarReducer'
-import s from '../../Day/TaskItem/TaskItem.module.css'
-import '../TaskListAnim.css'
+import s from '../../Day/TaskItem/TaskItem.module.scss'
+import '../TaskListAnim.scss'
 
 type TaskListItemPropsType = {
     id: number

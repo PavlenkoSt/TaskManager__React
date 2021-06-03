@@ -1,6 +1,6 @@
 import BodyContainer from "./Body/BodyContainer"
 import Head from "./Head/Head"
-import s from './Table.module.css'
+import s from './Table.module.scss'
 
 const Table = () => {
 

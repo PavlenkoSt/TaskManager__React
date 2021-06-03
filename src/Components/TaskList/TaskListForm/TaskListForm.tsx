@@ -1,4 +1,4 @@
-import s from '../../Day/TaskForm/TaskForm.module.css'
+import s from '../../Day/TaskForm/TaskForm.module.scss'
 import { reduxForm, Field, InjectedFormProps } from "redux-form"
 import { ComponentType } from 'react'
 

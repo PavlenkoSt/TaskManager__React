@@ -16,10 +16,9 @@
     height: 35px;
     color: #fff;
     transition: all ease .2s;
-}
-
-.btn:hover{
-    background-color: rgb(56, 105, 241);
+    &:hover{
+        background-color: rgb(56, 105, 241);
+    }
 }
 
 .active{
@@ -31,12 +30,10 @@
     background: url(../../../assets/icons/right-arrow-pag.svg) center no-repeat;
     background-size: cover;
     transition: all ease .2s;
-}
-
-.portionChange.prev{
-    transform: rotate(180deg);
-}
-
-.portionChange:hover{
-    background-color: #fff;
+    &.prev{
+        transform: rotate(180deg);
+    }
+    &:hover{
+        background-color: #fff;
+    }
 }
