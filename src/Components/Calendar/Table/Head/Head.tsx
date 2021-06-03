@@ -1,5 +1,5 @@
 import Nav from "./Nav/Nav"
-import s from './Head.module.css'
+import s from './Head.module.scss'
 import { useSelector } from "react-redux"
 import { dateNamesListSelector } from "../../../../Redux/calendarSelectors"
 

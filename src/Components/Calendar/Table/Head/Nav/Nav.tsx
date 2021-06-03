@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { changeActiveMonth } from '../../../../../Redux/calendarReducer'
 import { activeDateSelector, dateNamesListSelector } from '../../../../../Redux/calendarSelectors'
-import s from './Nav.module.css'
+import s from './Nav.module.scss'
 
 const Nav = () => {
     const dispatch = useDispatch()
