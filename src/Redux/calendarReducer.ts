@@ -44,19 +44,7 @@ const initialValue = {
         months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
         monthsForDay: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
     },
-    records: [
-        { id: 0, date: '2021.3.20', text: 'Купить хлеб', time: '11:00', completed: false },
-        { id: 1, date: '2021.3.23', text: 'Купить молоко', time: '12:00', completed: false },
-        { id: 2, date: '2021.3.23', text: 'Купить масло', time: '12:00', completed: false },
-        { id: 3, date: '2021.3.23', text: 'Спасти Вселенную', time: '13:00', completed: true },
-        { id: 4, date: '2021.3.23', text: 'Пропылесосить в будке у пса', time: '15:30', completed: false },
-        { id: 5, date: '2021.3.20', text: 'Купить квартиру', time: '11:00', completed: false },
-        { id: 6, date: '2021.3.19', text: 'Купить машину', time: '12:00', completed: true },
-        { id: 7, date: '2021.3.22', text: 'Купить булку', time: '12:00', completed: false },
-        { id: 8, date: '2021.3.21', text: 'Спасти Вселенную ещё раз', time: '13:00', completed: true },
-        { id: 9, date: '2021.3.20', text: 'Покормить кроликов', time: '15:30', completed: false },
-        { id: 10, date: '2021.3.26', text: 'Сьесть кроликов', time: '15:30', completed: false },
-    ],
+    records: [] as Array<RecordType>,
     settings: {
         filter: 'all',
         sort: 'lastAdded'
